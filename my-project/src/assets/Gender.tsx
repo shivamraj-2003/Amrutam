@@ -25,7 +25,7 @@ const Gender: React.FC = () => {
       </div>
 
       {isHovered && (
-        <div className="absolute top-full left-0 mt-2 w-full border border-gray-300 rounded-lg shadow-lg z-10">
+        <div className="absolute border border-2 border-gray-500 top-full left-0 mt-2 w-full  rounded-lg shadow-lg z-10">
           {options.map((option, index) => (
             <div
               key={index}

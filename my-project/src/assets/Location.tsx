@@ -1,46 +1,42 @@
 import React, { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Location: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false); 
-  const [selectedLocation, setSelectedLocation] = useState<string>("Select Location"); 
+  const [isHovered, setIsHovered] = useState<boolean>(false); 
 
-  const locations: string[] = ["New York", "London", "Paris", "Tokyo", "Sydney"]; 
-
-  const handleSelect = (location: string): void => { 
-    setSelectedLocation(location);
-    setIsOpen(false);
-  };
+  const options: string[] = [ 
+    "India",
+    "New York",
+    "Delhi",
+    "Mumbai",
+  ];
 
   return (
-    <div className="relative w-64">
-      <div
-        className="p-3 cursor-pointer flex justify-between items-center text-gray-500"
-        onMouseEnter={() => setIsOpen(true)} 
-        onMouseLeave={() => setIsOpen(false)} 
-      >
-        <span>{selectedLocation}</span>
-        <svg
-          className={`w-5 h-5 transform transition-transform ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-        </svg>
+    <div
+      className="relative w-full max-w-md"
+      onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)} 
+    >
+      <div className="flex justify-between items-center p-3">
+        <div className="text-sm font-medium">Location</div>
+        <div className="ml-4">
+          <MdKeyboardArrowDown
+            size={24}
+            className={`transition-transform ${
+              isHovered ? "rotate-180" : "rotate-0"
+            }`}
+          />
+        </div>
       </div>
 
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-full bg-white z-10">
-          {locations.map((location) => (
+      {isHovered && (
+        <div className="absolute border border-2 border-gray-500 top-full left-0 mt-2 w-full  rounded-lg shadow-lg z-10">
+          {options.map((option, index) => (
             <div
-              key={location}
-              className="px-4 py-2 cursor-pointer"
-              onClick={() => handleSelect(location)} 
+              key={index}
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              {location}
+              {option}
             </div>
           ))}
         </div>

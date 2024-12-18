@@ -61,17 +61,17 @@ function App() {
 
       
       <div className="flex mt-8 justify-evenly">
-          <div className="flex bg-gray-300 text-gray-500 rounded-lg p-2 h-14 font-medium w-50 justify-between cursor-pointer transition ease-out transform hover:scale-105">
+          <div className="flex bg-gray-300 text-gray-500 rounded-lg  h-12 font-medium w-50 justify-between cursor-pointer transition ease-out transform hover:scale-105">
               <div><Expertise/></div>
               
           </div>
-          <div className="flex bg-gray-300 text-gray-500 rounded-lg p-2  h-14 font-medium w-50 justify-between cursor-pointer transition ease-out transform hover:scale-105">
+          <div className="flex bg-gray-300 text-gray-500 rounded-lg   h-12 font-medium w-50 justify-between cursor-pointer transition ease-out transform hover:scale-105">
 <Gender/>
           </div>
-          <div className="flex bg-gray-300 text-gray-500 text-center rounded-lg p-2 h-14 font-medium w-56 justify-between cursor-pointer transition ease-out transform hover:scale-105">
+          <div className="flex bg-gray-300 text-gray-500 text-center rounded-lg  h-12 font-medium w-56 justify-between cursor-pointer transition ease-out transform hover:scale-105">
               <Fees/>
           </div>
-          <div className="flex bg-gray-300 text-gray-500 rounded-lg p-2 h-14 font-medium w-56 justify-between cursor-pointer transition ease-out transform hover:scale-105">
+          <div className="flex bg-gray-300 text-gray-500 rounded-lg h-12 font-medium w-56 z-50  justify-between cursor-pointer transition ease-out transform hover:scale-105">
               <Languages/>
           </div>
           <div className="flex bg-green-200 text-green-500 rounded-lg p-2 h-12 font-medium w-56 justify-between cursor-pointer transition ease-out transform hover:scale-105">
@@ -87,7 +87,7 @@ function App() {
 
 
 
-    <div className="flex justify-end mt-10 pr-24">
+    <div className="relative flex justify-end mt-10 pr-24">
     <div className="relative flex bg-green-100 p-2 rounded-2xl justify-center items-center cursor-pointer transition ease-out transform hover:scale-105 z-10 mx-4">
         <div>Hair Care</div>
         <div className="text-gray-500 font-semibold ml-2">

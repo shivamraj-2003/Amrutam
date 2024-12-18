@@ -8,7 +8,7 @@ const Languages: React.FC = () => {
 
   return (
     <div
-      className="relative w-full max-w-md"
+      className="relative w-full z-50 max-w-md"
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)} 
     >
@@ -25,7 +25,7 @@ const Languages: React.FC = () => {
       </div>
 
       {isHovered && (
-        <div className="absolute top-full left-0 mb-2 w-full border border-gray-300 rounded-lg shadow-lg z-50">
+        <div className="absolute border border-2 border-gray-500 bg-gray-50  w-full left-90 rounded-lg shadow-lg z-80">
           {options.map((option, index) => (
             <div
               key={index}

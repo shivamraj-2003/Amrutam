@@ -13,12 +13,12 @@ const Expertise: React.FC = () => {
 
   return (
     <div
-      className="relative w-full max-w-md"
+      className="relative w-full h max-w-md"
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)} 
     >
       <div className="flex justify-between items-center p-3">
-        <div className="text-sm font-medium">Select Expertise</div>
+        <div className="text-sm font-medium">Expertise</div>
         <div className="ml-4">
           <MdKeyboardArrowDown
             size={24}
@@ -30,7 +30,7 @@ const Expertise: React.FC = () => {
       </div>
 
       {isHovered && (
-        <div className="absolute top-full left-0 mt-2 w-full border border-gray-300 rounded-lg shadow-lg z-10">
+        <div className="absolute border border-2 border-gray-500 top-full left-0 mt-2 w-full  rounded-lg shadow-lg z-10">
           {options.map((option, index) => (
             <div
               key={index}
